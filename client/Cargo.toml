@@ -1,0 +1,15 @@
+[package]
+name = "client"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.57"
+tokio = { version = "1.18", features = ["full"] }
+prost = "0.9.0"
+
+validator-client = { git = "https://github.com/nymtech/nym", rev = "v1.0.1", features = ["nymd-client"] }
+cosmrs = { version = "0.4", features = ["cosmwasm"] }
+common = { path = "../common" }
